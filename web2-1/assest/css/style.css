@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  direction: rtl;
+  font-family: Vazirmatn;
+}
+h2 {
+  line-height: 36px;
+  font-size: 20px;
+}
+p {
+  margin-bottom: 0;
+}
+a {
+  text-decoration: none;
+  background-color: transparent;
+  color: #303740;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+section {
+  padding: 80px 0;
+  position: relative;
+}
+.sec-heading p {
+  line-height: 1.2;
+}
+.sec-heading.center {
+  text-align: center;
+}
+.sec-heading {
+  margin-bottom: 2rem;
+}
+.color {
+  color: red;
+}
+.row {
+  padding: 0 -15px;
+}
+#edu .col-md-6 {
+  padding: 0 15px;
+}
+#edu .edu_cat_1 {
+  width: 100%;
+  margin-bottom: 25px;
+  border-radius: 0.4rem;
+  background: #f4f5f7;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all ease 0.4s;
+}
+.edu_cat_1:hover,
+.edu_cat_1:focus {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.075);
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.075);
+}
+#edu .edu_cat_1.cat-2 {
+  background: rgba(0, 173, 182, 0.1);
+}
+#edu .edu_cat_icons {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.edu_cat_icons img {
+  max-width: 40px;
+}
+#edu .edu_cat_data {
+  padding-right: 15px;
+}
+#edu .edu_cat_data h4 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+#edu .edu_cat_1.cat-2 h4 > a {
+  color: #00adb6;
+}
+.edu_cat_data p {
+  margin: 0;
+}
+#edu .edu_cat_1.cat-3 {
+  background: rgba(154, 222, 69, 0.1);
+}
+#edu .edu_cat_1.cat-3 h4 > a {
+  color: #9ade45;
+}
+#courses {
+  background-color: #fbf5f4;
+}
+.education_block_list_layout {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid #e8ebf1;
+  background: #ffffff;
+  border-radius: 0.4rem;
+  margin-bottom: 30px;
+  padding: 1rem;
+}
+.education_block_list_layout .box-image {
+  width: 200px;
+  height: 180px;
+  margin: 0;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+.education_block_list_layout .box-image .image {
+  aspect-ratio: 1/1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.education_block_list_layout .box-image .box1 {
+  background-image: url(../image/box1.jpg);
+}
+.education_block_list_layout .box-image .box2 {
+  background-image: url(../image/box2.jpg);
+}
+.education_block_list_layout .box-image .box3 {
+  background-image: url(../image/box3.jpg);
+}
+.education_block_list_layout .box-image .box4 {
+  background-image: url(../image/box4.jpg);
+}
+.education_block_list_layout .box-image .box5 {
+  background-image: url(../image/box5.png);
+}
+.education_block_list_layout .box-image .box6 {
+  background-image: url(../image/box6.png);
+}
+.list_layout_ecucation_caption {
+  display: block;
+  width: 75%;
+}
+.list_layout_ecucation_caption .education_block_body {
+  padding: 0 20px 0 20px;
+}
+.list_layout_ecucation_caption .education_block_body .b1-title {
+  font-size: 17px;
+  margin: 0;
+  line-height: 1.2;
+}
+.list_layout_ecucation_caption .education_block_body .b1-title a {
+  color: #2d3954;
+}
+._course-admin {
+  margin-top: 4px;
+  font-size: 13px;
+  display: block;
+  color: #333c56c4;
+}
+._course-admin strong {
+  color: #333c56;
+}
+._course_less_infor {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+._course_less_infor .episodes {
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+._course_less_infor .episodes p {
+  color: red;
+  line-height: 1.4;
+  font-size: 14px;
+}
+._course_less_infor .episodes span {
+  margin-left: 5px;
+}
+._course_less_infor .class-online .icon {
+  width: 9px;
+  height: 9px;
+  background-color: #4caf50;
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 3px #a3dea5;
+  margin-left: 10px;
+}
+._course_less_infor .class-online p {
+  font-size: 14px;
+  color: #333c56c4;
+}
+.list_layout_ecucation_caption .education_block_footer {
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.list_layout_ecucation_caption .education_block_footer .cources_price {
+  font-weight: 600;
+  font-size: 20px;
+}
+.list_layout_ecucation_caption .education_block_footer .cources_info_style {
+  width: 35px;
+  height: 35px;
+}
+a._cr_detail_arrow {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #da0b4e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+}
+.list_layout_ecucation_caption
+  .education_block_footer
+  .cources_info_style:hover
+  a {
+  color: #da0b4e;
+}
+@media screen and (max-width: 800px) {
+  .education_block_list_layout {
+    flex-wrap: wrap;
+  }
+  .education_block_list_layout .box-image {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 17px;
+  }
+  .education_block_list_layout .box-image .image {
+    aspect-ratio: 1.6/1;
+  }
+  .list_layout_ecucation_caption {
+    width: 100%;
+  }
+}
+#min-sec .latest-articles {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+#min-sec .latest-articles h4 {
+  font-size: 20px;
+}
+#min-sec .articles_grid_style {
+  width: 100%;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.075);
+  margin-bottom: 40px;
+}
+#min-sec .articles_grid_style .image-box {
+  width: 100%;
+}
+#min-sec .articles_grid_style .image-box a {
+  width: 100%;
+  display: block;
+}
+#min-sec .articles_grid_style .image-box .image {
+  aspect-ratio: 1.5/1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#min-sec .articles_grid_style .image-box .box1 {
+  background-image: url(../image/min-sec-box1.jpg);
+}
+#min-sec .articles_grid_style .image-box .box2 {
+  background-image: url(../image/min-sec-box2.jpg);
+}
+#min-sec .articles_grid_style .image-box .box3 {
+  background-image: url(../image/min-sec-box3.jpg);
+}
+#min-sec .articles_grid_caption {
+  padding: 1.1rem;
+}
+#min-sec .articles_grid_caption h4 {
+  font-size: 20px;
+}
+#min-sec .articles_grid_author {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-top: 30px;
+}
+#min-sec .articles_grid_author .articles_grid_author_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 1rem;
+}
+#min-sec .articles_grid_author .articles_grid_author_img ._img {
+  aspect-ratio: 1/1;
+  background-image: url(../image/hamidi.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#min-sec .articles_grid_author h4 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #7182a7;
+  position: relative;
+  top: 7px;
+}
