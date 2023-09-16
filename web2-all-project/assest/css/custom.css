@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Playfair Display", serif;
+}
+a {
+  text-decoration: none;
+}
+
+/* start sec- */
+
+#sec-1 .common-title h5 {
+  color: #fe7524;
+}
+#sec-1 .common-title h3 {
+  color: #094174;
+}
+#sec-1 .home-two-about-content p {
+  text-align: justify;
+}
+#sec-1 .home-two-about-list ul {
+  list-style: none;
+}
+#sec-1 .home-two-about-list ul li {
+  color: #004274;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 40px;
+}
+#sec-1 .home-two-about-list ul li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/list-arrow.png);
+}
+#sec-1 .btn-1 .btn {
+  --bs-btn-bg: #fe7524;
+  transition: 1s;
+}
+#sec-1 .btn-1 a span {
+  width: 0;
+  height: 0;
+  color: #ffffff;
+  border-radius: 50%;
+  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  transform: translate(-50%, -50%);
+  background: #094174;
+  z-index: -1;
+}
+#sec-1 .btn-1 a:hover span {
+  width: 200%;
+  height: 240px;
+  z-index: -1;
+}
+#sec-1 .img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#sec-1 .box-img-top .img {
+  background-image: url(../img/download.jpg);
+}
+#sec-1 .box-img-left .img {
+  background-image: url(../img/pic1.jpg);
+}
+#sec-1 .box-img-right .img {
+  background-image: url(../img/images.jpg);
+}
+
+/* end sec-2 */
+
+/* start sec-2 */
+
+#sec-2 .header-title h5 {
+  color: #fe7524;
+}
+#sec-2 .header-title h3 {
+  color: #094174;
+}
+#sec-2 .box-image .img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#sec-2 .box-1 .img {
+  background-image: url(../img/pic2.jpg);
+}
+#sec-2 .box-2 .img {
+  background-image: url(../img/pic3.jpg);
+}
+#sec-2 .box-3 .img {
+  background-image: url(../img/pic4.jpg);
+}
+#sec-2 .box-4 .img {
+  background-image: url(../img/pic5.jpg);
+}
+#sec-2 .box-5 .img {
+  background-image: url(../img/pic6.jpg);
+}
+#sec-2 .box-6 .img {
+  background-image: url(../img/pic7.jpg);
+}
+#sec-2 .box-7 .img {
+  background-image: url(../img/pic8.jpg);
+}
+#sec-2 .box-8 .img {
+  background-image: url(../img/pic9.jpg);
+}
+#sec-2 .content h4 {
+  color: #fe7524;
+}
+#sec-2 .content a {
+  color: #094174;
+  transition: 0.5s;
+}
+#sec-2 .content a:hover {
+  color: #fe7524;
+}
+
+/* end sec-2 */
