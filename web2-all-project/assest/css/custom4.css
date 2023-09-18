@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Playfair Display", serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+#destination-details .destination-details-left-container {
+  margin-bottom: 140px;
+}
+#destination-details .destination-details-left-container button {
+  color: #094174;
+}
+#destination-details .destination-details-left-container button::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  line-height: 44px;
+  font-size: 37px;
+  font-weight: bold;
+  color: #094174;
+}
+#destination-details .destination-details-left-container .button-show::after {
+  content: "-";
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  line-height: 44px;
+  font-size: 37px;
+  font-weight: bold;
+  color: #094174;
+}
+#destination-details .destination-details-left-container .card {
+  background-color: #f7fcff;
+}
+#destination-details .destination-common-title {
+  color: #094174;
+}
+#destination-details input {
+  outline: none;
+  border: none;
+  padding: 20px 0;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 18px;
+}
+#destination-details input::placeholder {
+  color: rgba(128, 128, 128, 0.637);
+}
+#destination-details .form-1 input {
+  width: 47%;
+}
+#destination-details textarea {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #eeeeee;
+  width: 98%;
+  height: 120px !important;
+  margin-top: 50px;
+  font-size: 18px;
+}
+#destination-details textarea::placeholder {
+  color: rgba(128, 128, 128, 0.637);
+}
+#destination-details .destination-right-search button {
+  right: 25px;
+  top: 5px;
+}
+#destination-details .destination-right-search button span {
+  color: #094174;
+}
+#destination-details .destination-right-title h4 {
+  color: #094174;
+}
+#destination-details .destination-right-list-info a {
+  color: #094174;
+}
+#destination-details
+  .destination-details-right-container
+  .destination-category
+  a {
+  color: #094174;
+  font-size: 18px;
+  font-weight: 400;
+  transition: 0.5s;
+}
+#destination-details
+  .destination-details-right-container
+  .destination-category
+  a:hover {
+  color: #fe7524;
+}
+#destination-details
+  .destination-details-right-container
+  .destination-category
+  li {
+  margin-bottom: 15px;
+}
+#destination-details
+  .destination-details-right-container
+  .destination-right-media
+  a {
+  color: #094174;
+  font-size: 25px;
+}
+#destination-details
+  .destination-details-right-container
+  .destination-right-media
+  a:hover {
+  color: #fe7524;
+}

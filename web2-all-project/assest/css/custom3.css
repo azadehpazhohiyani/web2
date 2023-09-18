@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Playfair Display", serif;
+}
+a {
+  text-decoration: none;
+}
+#tour-package .card-img-top .img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#tour-package .img-1 .img {
+  background-image: url(../img/pic16.jpg);
+}
+#tour-package .img-2 .img {
+  background-image: url(../img/pic17.jpg);
+}
+#tour-package .img-3 .img {
+  background-image: url(../img/pic18.jpg);
+}
+#tour-package .img-4 .img {
+  background-image: url(../img/pic19.jpg);
+}
+#tour-package .img-5 .img {
+  background-image: url(../img/pic20.jpg);
+}
+#tour-package .img-6 .img {
+  background-image: url(../img/pic21.jpg);
+}
+#tour-package .card-body .star,
+#tour-package .card-body .price {
+  color: #fe7524;
+}

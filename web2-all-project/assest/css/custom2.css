@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Playfair Display", serif;
+}
+a {
+  text-decoration: none;
+}
+#contact .destination-right-title h4 {
+  color: #094174;
+}
+#contact .destination-right-title p {
+  text-align: justify;
+}
+#contact .contact-page-info .contact-number a {
+  width: 80px;
+  height: 80px;
+}
+#contact .contact-page-info .contact-number ul {
+  list-style: none;
+}
+#contact .contact-page-info .contact-number span {
+  color: #094174;
+  font-size: 50px;
+}
+#contact .destination-form-container input {
+  outline: none;
+  border: none;
+  padding: 20px 0;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 18px;
+}
+#contact .destination-form-container input::placeholder {
+  color: rgba(128, 128, 128, 0.637);
+}
+#contact .destination-form-container .form-1 input {
+  width: 47%;
+}
+#contact .destination-form-container textarea {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #eeeeee;
+  width: 98%;
+  height: 120px !important;
+  margin-top: 50px;
+  font-size: 18px;
+}
+#contact .destination-form-container textarea::placeholder {
+  color: rgba(128, 128, 128, 0.637);
+}
+#contact .destination-form-container .contact-check input {
+  transform: scale(1.5);
+}
+#contact .destination-form-container .contact-check label {
+  font-size: 15px;
+}
