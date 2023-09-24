@@ -18,17 +18,8 @@ ul {
 #destination-details .destination-details-left-container button {
   color: #094174;
 }
-#destination-details .destination-details-left-container button::after {
-  content: "+";
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  line-height: 44px;
-  font-size: 37px;
-  font-weight: bold;
-  color: #094174;
-}
-#destination-details .destination-details-left-container .button-show::after {
+
+#destination-details .destination-details-left-container .test::after {
   content: "-";
   position: absolute;
   right: 20px;
@@ -37,6 +28,11 @@ ul {
   font-size: 37px;
   font-weight: bold;
   color: #094174;
+}
+#destination-details
+  .destination-details-left-container
+  .test.collapsed::after {
+  content: "+";
 }
 #destination-details .destination-details-left-container .card {
   background-color: #f7fcff;
