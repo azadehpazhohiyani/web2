@@ -9,8 +9,28 @@ body {
 a {
   text-decoration: none;
 }
+/* start header */
 
-/* start sec- */
+#header li {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #094174;
+}
+#header a {
+  color: #094174;
+}
+#header a.active {
+  color: #fe7524;
+}
+#header a:hover {
+  color: #fe7524;
+}
+#header .search span {
+  color: #094174;
+}
+/* end header */
+
+/* start sec-1 */
 
 #sec-1 .common-title h5 {
   color: #fe7524;
@@ -73,7 +93,7 @@ a {
   background-image: url(../img/images.jpg);
 }
 
-/* end sec-2 */
+/* end sec-1 */
 
 /* start sec-2 */
 
