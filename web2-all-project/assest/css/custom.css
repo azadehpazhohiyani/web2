@@ -18,19 +18,38 @@ a {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-#header li {
+#header .color-hover li {
   font-size: 18px;
   margin-right: 10px;
   color: #094174;
 }
-#header a {
+#header .color-hover a {
   color: #094174;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 5px;
+  display: inline-block;
 }
-#header a.active {
+#header .color-hover a::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #fe7524;
+  position: absolute;
+  bottom: 0;
+  right: 100%;
+  display: inline-block;
+  transition: 0.5s;
+}
+#header .color-hover a.active {
   color: #fe7524;
 }
-#header a:hover {
+#header .color-hover a:hover {
   color: #fe7524;
+}
+#header .color-hover a:hover::before {
+  right: 0;
 }
 #header .search span {
   color: #094174;

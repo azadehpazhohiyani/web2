@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Playfair Display", serif;
+}
+a {
+  text-decoration: none;
+}
+#product .card-img-top .img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#product .img-1 .img {
+  background-image: url(../img/hotel\ 1.webp);
+}
+#product .img-2 .img {
+  background-image: url(../img/hotel\ 3.webp);
+}
+#product .img-3 .img {
+  background-image: url(../img/hotel\ 4.webp);
+}
+#product .img-4 .img {
+  background-image: url(../img/hotel\ 5.webp);
+}
+#product .img-5 .img {
+  background-image: url(../img/hotel\ 10.webp);
+}
+#product .img-6 .img {
+  background-image: url(../img/hotel\ 11.webp);
+}
+#product .card-body .star,
+#product .card-body .price {
+  color: #fe7524;
+}

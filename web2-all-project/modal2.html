@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fa.ir">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نمونه فرم کتابخانه</title>
+    <link rel="stylesheet" href="assest/css/bootstrap.css" />
+    <link rel="stylesheet" href="assest/Vazirmatn-font-face.css" />
+    <link rel="stylesheet" href="assest/css/modal2.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="container">
+      <div
+        class="row justify-content-center align-items-center"
+        style="height: 100vh"
+      >
+        <div class="col-6 start-modal rounded-3 p-5">
+          <p class="fs-4 text-center">
+            هزینه عضویت در کتابخانه به مدت 1 سال
+            <span class="text-danger"> 50 هزارتومان </span>است. در صورت تمایل و
+            پرداخت هزینه به مرحله بعد رفته و اطلاعات خود را وارد نمایید.
+          </p>
+          <a
+            class="btn btn-primary d-block m-auto w-25 mt-5"
+            data-bs-toggle="modal"
+            href="#exampleModalToggle"
+            role="button"
+            >مرحله بعد</a
+          >
+          <div
+            class="modal fade"
+            id="exampleModalToggle"
+            aria-hidden="true"
+            aria-labelledby="exampleModalToggleLabel"
+            tabindex="-1"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body name">
+                  <form action="#">
+                    <label for="fname"
+                      >لطفا نام و نام خانوادگی خودر را وارد کنید :</label
+                    >
+                    <br />
+                    <input
+                      type="text"
+                      name="fname"
+                      id="fname"
+                      class="mt-4 p-2 w-75 rounded-3 mb-3 border-0 shadow"
+                    />
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-primary ms-auto"
+                    data-bs-target="#exampleModalToggle2"
+                    data-bs-toggle="modal"
+                  >
+                    مرحله بعد
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    مرحله قبل
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal fade"
+            id="exampleModalToggle2"
+            aria-hidden="true"
+            aria-labelledby="exampleModalToggleLabel2"
+            tabindex="-1"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form action="#">
+                    <label for="phone"
+                      >لطفا شماره تماس خود را وارد کنید :</label
+                    >
+                    <br />
+                    <input
+                      type="tel"
+                      name="phone"
+                      id="phone"
+                      class="mt-4 p-2 w-75 rounded-3 mb-3 border-0 shadow"
+                    />
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-primary ms-auto"
+                    data-bs-target="#exampleModalToggle3"
+                    data-bs-toggle="modal"
+                  >
+                    مرحله بعد
+                  </button>
+                  <button
+                    class="btn btn-primary"
+                    data-bs-target="#exampleModalToggle"
+                    data-bs-toggle="modal"
+                  >
+                    مرحله قبل
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal fade"
+            id="exampleModalToggle3"
+            aria-hidden="true"
+            aria-labelledby="exampleModalToggleLabel3"
+            tabindex="-1"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form action="#">
+                    <label for="codemeli">لطفا کد ملی خود را وارد کنید :</label>
+                    <br />
+                    <input
+                      type="number"
+                      name="codemeli"
+                      id="codemeli"
+                      class="mt-4 p-2 w-75 rounded-3 mb-3 border-0 shadow"
+                    />
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-primary ms-auto"
+                    data-bs-target="#exampleModalToggle4"
+                    data-bs-toggle="modal"
+                  >
+                    مرحله بعد
+                  </button>
+                  <button
+                    class="btn btn-primary"
+                    data-bs-target="#exampleModalToggle2"
+                    data-bs-toggle="modal"
+                  >
+                    مرحله قبل
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal fade"
+            id="exampleModalToggle4"
+            aria-hidden="true"
+            aria-labelledby="exampleModalToggleLabel4"
+            tabindex="-1"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p>ثبت نام شما با موفقیت انجام شد</p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    بستن
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assest/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
