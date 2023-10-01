@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .main-banner .banner-image {
+        position: relative;
+      }
+      .main-banner .banner-image img {
+        position: absolute;
+      }
+      .main-banner .banner-image img:nth-child(1) {
+        z-index: 3;
+        top: -130px;
+        left: -45px;
+      }
+      .main-banner .banner-image img:nth-child(2) {
+        right: 145px;
+        top: -287px;
+      }
+      .main-banner .banner-image img:nth-child(3) {
+        left: 25px;
+        top: -20px;
+      }
+      .main-banner .banner-image img:nth-child(4) {
+        right: 12%;
+        top: 118px;
+        z-index: 1;
+      }
+      .main-banner .banner-image img:nth-child(5) {
+        left: 30%;
+        top: -110px;
+        z-index: 2;
+      }
+      .main-banner .banner-image img:nth-child(6) {
+        right: 35%;
+        z-index: 1;
+        top: -150px;
+      }
+      .main-banner .banner-image img:nth-child(7) {
+        right: 20px;
+        top: -110px;
+      }
+      .main-banner .banner-image img:nth-child(8) {
+        right: 25px;
+        top: -140px;
+      }
+      .main-banner .banner-image img:nth-child(9) {
+        right: 30%;
+        z-index: 1;
+        top: -35px;
+      }
+      .main-banner .banner-image img:nth-child(10) {
+        left: 37%;
+        top: -28px;
+        z-index: 1;
+      }
+      .main-banner .banner-image img:nth-child(11) {
+        left: 37%;
+        top: -160px;
+        z-index: 1;
+      }
+      .main-banner .banner-image img:nth-child(12) {
+        left: 130px;
+        top: -110px;
+      }
+      .main-banner .banner-image img:nth-child(13) {
+        left: 56%;
+        top: -25px;
+        z-index: 2;
+      }
+      .main-banner .banner-image img:nth-child(14) {
+        right: 145px;
+        top: -20px;
+      }
+      .main-banner .banner-image img:last-child {
+        display: none;
+      }
+
+      .offset-lg-1 {
+        margin-left: auto;
+        margin-right: 8.333333%;
+      }
+
+      .animated.infinite {
+        animation-iteration-count: infinite;
+      }
+
+      .animated.hinge {
+        animation-duration: 2s;
+      }
+
+      .animated.flipOutX,
+      .animated.flipOutY,
+      .animated.bounceIn,
+      .animated.bounceOut {
+        animation-duration: 0.75s;
+      }
+      @keyframes bounceIn {
+        from,
+        20%,
+        40%,
+        60%,
+        80%,
+        to {
+          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+
+        0% {
+          opacity: 0;
+          transform: scale3d(0.3, 0.3, 0.3);
+        }
+
+        20% {
+          transform: scale3d(1.1, 1.1, 1.1);
+        }
+
+        40% {
+          transform: scale3d(0.9, 0.9, 0.9);
+        }
+
+        60% {
+          opacity: 1;
+          transform: scale3d(1.03, 1.03, 1.03);
+        }
+
+        80% {
+          transform: scale3d(0.97, 0.97, 0.97);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale3d(1, 1, 1);
+        }
+      }
+
+      .bounceIn {
+        animation-name: bounceIn;
+      }
+
+      .fadeIn {
+        animation-name: fadeIn;
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translate3d(0, -100%, 0);
+        }
+
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      .fadeInDown {
+        animation-name: fadeInDown;
+      }
+
+      @keyframes fadeInLeft {
+        from {
+          opacity: 0;
+          transform: translate3d(-100%, 0, 0);
+        }
+
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      .fadeInLeft {
+        animation-name: fadeInLeft;
+      }
+
+      @keyframes fadeInRight {
+        from {
+          opacity: 0;
+          transform: translate3d(100%, 0, 0);
+        }
+
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      .fadeInRight {
+        animation-name: fadeInRight;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translate3d(0, 100%, 0);
+        }
+
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      .fadeInUp {
+        animation-name: fadeInUp;
+      }
+
+      .rotateIn {
+        animation-name: rotateIn;
+      }
+
+      @keyframes rollIn {
+        from {
+          opacity: 0;
+          transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+        }
+
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      .rollIn {
+        animation-name: rollIn;
+      }
+
+      @keyframes rollOut {
+        from {
+          opacity: 1;
+        }
+
+        to {
+          opacity: 0;
+          transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+        }
+      }
+
+      .rollOut {
+        animation-name: rollOut;
+      }
+
+      @keyframes zoomIn {
+        from {
+          opacity: 0;
+          transform: scale3d(0.3, 0.3, 0.3);
+        }
+
+        50% {
+          opacity: 1;
+        }
+      }
+
+      .zoomIn {
+        animation-name: zoomIn;
+      }
+    </style>
+  </head>
+  <body>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <div class="container main-banner">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-1">
+          <div class="banner-image">
+            <img
+              src="assest/image/man.png"
+              class="wow fadeInDown"
+              alt="man"
+              style="
+                visibility: visible;
+                animation-delay: 0.6s;
+                animation-name: fadeInDown;
+                animation-duration: 0.8s;
+              "
+            />
+            <img
+              src="assest/image/code.png"
+              class="wow fadeInUp"
+              alt="code"
+              style="
+                visibility: visible;
+                animation-delay: 0.6s;
+                animation-name: fadeInUp;
+                animation-duration: 0.8s;
+              "
+            />
+            <img
+              src="assest/image/carpet.png"
+              class="wow fadeInLeft"
+              alt="carpet"
+              style="
+                visibility: visible;
+                animation-delay: 0.6s;
+                animation-name: fadeInLeft;
+                animation-duration: 0.8s;
+              "
+            />
+            <img
+              src="assest/image/bin.png"
+              class="wow zoomIn"
+              alt="bin"
+              style="
+                visibility: visible;
+                animation-delay: 0.6s;
+                animation-name: zoomIn;
+                animation-duration: 0.8s;
+              "
+            />
+            <img
+              src="assest/image/book.png"
+              class="wow bounceIn"
+              alt="book"
+              style="
+                visibility: visible;
+                animation-delay: 0.6s;
+                animation-name: bounceIn;
+                animation-duration: 0.8s;
+              "
+            />
+            <img
+              src="assest/image/dekstop.png"
+              class="wow fadeInDown"
+              alt="dekstop"
+              style="
+                visibility: visible;
+                animation-delay: 0.6s;
+                animation-name: fadeInDown;
+                animation-duration: 0.8s;
+              "
+            />
+            <img
+              src="assest/image/dot.png"
+              class="wow zoomIn"
+              alt="dot"
+              style="
+                visibility: visible;
+                animation-delay: 0.6s;
+                animation-name: zoomIn;
+                animation-duration: 0.8s;
+              "
+            />
+            <img
+              src="assest/image/flower-top-big.png"
+              class="wow fadeInUp"
+              alt="flower-top-big"
+              style="
+                visibility: visible;
+                animation-delay: 0.6s;
+                animation-name: fadeInUp;
+                animation-duration: 0.8s;
+              "
+            />
+            <img
+              src="assest/image/flower-top.png"
+              class="wow rotateIn"
+              alt="flower-top"
+              style="
+                visibility: visible;
+                animation-delay: 0.6s;
+                animation-name: rotateIn;
+                animation-duration: 0.8s;
+              "
+            />
+            <img
+              src="assest/image/keyboard.png"
+              class="wow fadeInUp"
+              alt="keyboard"
+              style="
+                visibility: visible;
+                animation-delay: 0.6s;
+                animation-name: fadeInUp;
+                animation-duration: 0.8s;
+              "
+            />
+            <img
+              src="assest/image/pen.png"
+              class="wow zoomIn"
+              alt="pen"
+              style="
+                visibility: visible;
+                animation-delay: 0.6s;
+                animation-name: zoomIn;
+                animation-duration: 0.8s;
+              "
+            />
+            <img
+              src="assest/image/table.png"
+              class="wow zoomIn"
+              alt="table"
+              style="
+                visibility: visible;
+                animation-delay: 0.6s;
+                animation-name: zoomIn;
+                animation-duration: 0.8s;
+              "
+            />
+            <img
+              src="assest/image/tea-cup.png"
+              class="wow fadeInLeft"
+              alt="tea-cup"
+              style="
+                visibility: visible;
+                animation-delay: 0.6s;
+                animation-name: fadeInLeft;
+                animation-duration: 0.8s;
+              "
+            />
+            <img
+              src="assest/image/headphone.png"
+              class="wow rollIn"
+              alt="headphone"
+              style="
+                visibility: visible;
+                animation-delay: 0.6s;
+                animation-name: rollIn;
+                animation-duration: 0.8s;
+              "
+            />
+            <img
+              src="assest/image/main-pic.png"
+              class="wow fadeInUp animated"
+              alt="main-pic"
+              style="
+                visibility: hidden;
+                animation-delay: 0.6s;
+                animation-name: fadeInUp;
+                animation-duration: 0.8s;
+              "
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

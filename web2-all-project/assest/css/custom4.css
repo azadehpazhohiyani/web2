@@ -105,6 +105,7 @@ ul {
   a {
   color: #094174;
   font-size: 25px;
+  transition: 0.5s;
 }
 #destination-details
   .destination-details-right-container
