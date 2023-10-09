@@ -106,3 +106,56 @@ p {
   text-align: justify;
   line-height: 32px;
 }
+#section-services .button-link {
+  background-color: #ff5722;
+  border-radius: 10px;
+}
+#section-services .button-link:hover {
+  background-color: #f7663a;
+}
+#section-corporate {
+  margin: 150px 0;
+}
+#section-corporate .content p {
+  font-size: 18px;
+  text-align: justify;
+  line-height: 32px;
+}
+#section-corporate .detail-link a {
+  color: #ff5722;
+}
+#section-corporate .links-wrapper a {
+  background-color: #ff5722;
+  border-radius: 10px;
+}
+#section-corporate .links-wrapper a:hover {
+  background-color: #f7663a;
+}
+#section-parallax {
+  background-color: green;
+  background-image: url(../image/parallax.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#section-parallax .line {
+  width: 2px;
+  height: 50px;
+  background-color: white;
+}
+#section-parallax .content-wrapper h3 {
+  position: relative;
+  top: 50px;
+}
+#section-parallax .content-wrapper:hover h3 {
+  top: 0;
+}
+#section-parallax .content-wrapper p {
+  visibility: hidden;
+}
+#section-parallax .content-wrapper:hover p {
+  visibility: visible;
+}
+#section-drivers {
+  padding: 100px 0 50px 0;
+}
