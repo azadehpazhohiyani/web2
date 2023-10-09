@@ -15,13 +15,14 @@ p {
 }
 #header .navbar {
   border-bottom: 1px solid #ddd;
-  background-color: #f8f8f8;
+  background-color: #f8f8f8e0;
 }
 
 #header .nav-link {
   display: block;
   width: 100%;
   transition: 0.5s;
+  color: rgba(0, 0, 0, 0.952);
 }
 #header .nav-item:hover .nav-link {
   color: rgb(255, 87, 34);
@@ -29,6 +30,25 @@ p {
 #header .download {
   background-color: rgb(255, 87, 34);
   color: white;
+}
+.show-header-fiexd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  animation: 0.5s ease-in-out 0s normal none 1 running fadeInDown;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 #sec-1 {
   position: relative;
@@ -158,4 +178,24 @@ p {
 }
 #section-drivers {
   padding: 100px 0 50px 0;
+}
+#section-drivers p {
+  font-size: 18px;
+  text-align: justify;
+  line-height: 32px;
+  color: #4d4d4d;
+}
+#section-drivers h3 {
+  font-size: 22px;
+  color: #4d4d4d;
+}
+#section-drivers ul {
+  list-style: none;
+}
+#section-drivers ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-align: justify;
+  line-height: 32px;
+  color: #4d4d4d;
 }
