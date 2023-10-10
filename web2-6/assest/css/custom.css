@@ -70,6 +70,9 @@ p {
   height: calc(100vh - 61px - 22%);
   left: 0;
   top: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: start;
 }
 #sec-1 .content-container {
   background-image: linear-gradient(
@@ -91,7 +94,7 @@ p {
   font-weight: 700;
 }
 #sec-1 .sub-title {
-  font-size: 24px;
+  font-size: 25px;
   margin-bottom: 30px;
 }
 #sec-1 .content-container a {
@@ -100,6 +103,43 @@ p {
   max-width: 224px;
   text-align: center;
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  #sec-1 {
+    height: 480px;
+    padding-bottom: 0;
+    width: 100%;
+  }
+  #sec-1 .baner__image {
+    height: 480px;
+    object-fit: cover;
+    width: 100%;
+  }
+  #sec-1 .content-wrapper {
+    align-items: center;
+    display: flex;
+    height: 480px;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  #sec-1 .content-container {
+    margin: 15px 0;
+    padding: 16px;
+    width: 270px;
+  }
+  #sec-1 .title {
+    font-size: 25px !important;
+  }
+  #sec-1 .sub-title {
+    font-size: 16px !important;
+    text-align: right;
+  }
+  #sec-1 .content-container a {
+    height: 52px;
+  }
 }
 #section-services .nav button {
   max-width: 95px;
