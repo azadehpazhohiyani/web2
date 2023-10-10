@@ -52,22 +52,22 @@ p {
 }
 #sec-1 {
   position: relative;
-  height: calc(100vh - 61px);
-  padding-bottom: 220px;
+  height: 700px;
+  margin-bottom: 80px;
 }
 #sec-1 .baner__image {
-  height: calc(100vh - 61px - 22%);
+  height: 100%;
   top: 0;
   left: 0;
   object-fit: cover;
 }
 #sec-1 .baner__phone {
-  bottom: -15%;
+  bottom: -35%;
   height: 100%;
   left: 10%;
 }
 #sec-1 .content-wrapper {
-  height: calc(100vh - 61px - 22%);
+  height: 100%;
   left: 0;
   top: 0;
   width: 100%;
