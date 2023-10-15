@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+}
+body {
+  font-family: Roboto, sans-serif;
+}
+#header .navbar li {
+  padding: 14px 20px;
+}
+#header .navbar a {
+  display: block;
+}
+#header .tool-bar li {
+  padding: 14px 10px;
+}
+#header .drop-down .shop li:not(:first-child) {
+  font-size: 25px;
+  line-height: 0.5;
+  font-weight: 500;
+}
+#header .drop-down .quickLiks li:not(:first-child),
+#header .drop-down .shop-special-stire li:not(:first-child) {
+  line-height: 0.2;
+}
+#sec_iphone15pro_dark .iphone15pro__box_image .iphone15pro__image {
+  background-image: url(../image/hero_iphone15pro.jpg);
+  background-repeat: no-repeat;
+  background-size: 3008px 736px;
+  background-position: center;
+}
