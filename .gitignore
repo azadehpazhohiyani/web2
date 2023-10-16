@@ -37,4 +37,3 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,sass,less
-web2-tailwind/node_modules
