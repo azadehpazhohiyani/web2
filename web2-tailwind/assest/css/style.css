@@ -5,7 +5,7 @@ body {
   font-family: Roboto, sans-serif;
 }
 #header .navbar li {
-  padding: 14px 20px;
+  padding: 14px 15px;
 }
 #header .navbar a {
   display: block;
@@ -23,8 +23,26 @@ body {
   line-height: 0.2;
 }
 #sec_iphone15pro_dark .iphone15pro__box_image .iphone15pro__image {
-  background-image: url(../image/hero_iphone15pro.jpg);
   background-repeat: no-repeat;
-  background-size: 3008px 736px;
   background-position: center;
+}
+#sec_iphone15pro_dark .iphone15pro__box_image .large {
+  background-image: url(../image/hero_iphone15pro.jpg);
+  background-size: 3008px 736px;
+}
+#sec_iphone15pro_dark .iphone15pro__box_image .small {
+  background-image: url(../image/hero_iphone15pro__vertical.jpg);
+  background-size: cover;
+}
+#sec_iphone15pro_light .iphone15pro__box_image .iphone15pro__image {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#sec_iphone15pro_light .iphone15pro__box_image .large {
+  background-image: url(../image/hero_iphone15_white-horizantal.jpg);
+  background-size: 3008px 736;
+}
+#sec_iphone15pro_light .iphone15pro__box_image .small {
+  background-image: url(../image/iphone15-white-small.jpg);
+  background-size: 1250px 694px;
 }

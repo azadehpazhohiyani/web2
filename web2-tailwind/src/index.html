@@ -27,14 +27,14 @@
     <header id="header" class="fixed top-0 left-0 w-full z-50">
       <nav class="bg-bgHeader w-full">
         <div
-          class="container mx-auto flex justify-between items-center xl:justify-center"
+          class="container mx-auto flex justify-between items-center lg:justify-center"
         >
           <div class="logo">
             <a href="#"
               ><span class="ion-social-apple text-white text-2xl"></span
             ></a>
           </div>
-          <div class="navbar hidden xl:block">
+          <div class="navbar hidden lg:block">
             <ul
               class="text-white flex justify-center items-center text-xs px-5"
             >
@@ -45,9 +45,9 @@
                   data-dropdown-id="1"
                   data-status="open"
                 >
-                  <div class="container mx-auto ps-[80px]">
+                  <div class="container mx-auto max-w-[1000px]">
                     <div
-                      class="flex justify-start items-start gap-x-8 px-[80px] py-[35px]"
+                      class="flex justify-start items-start gap-x-8 py-[35px]"
                     >
                       <div class="shop text-white">
                         <ul>
@@ -99,7 +99,7 @@
           </div>
           <div class="tool-bar">
             <ul
-              class="flex justify-evenly items-center w-[110px] xl:justify-between"
+              class="flex justify-evenly items-center w-[110px] lg:justify-between"
             >
               <li class="text-white text-xl">
                 <a href="#"><span class="ion-android-search"></span></a>
@@ -111,7 +111,7 @@
                     class="w-[20px] h-[20px] block"
                 /></a>
               </li>
-              <li class="text-2xl text-white block xl:hidden">
+              <li class="text-2xl text-white block lg:hidden">
                 <a href="#"><span class="ion-navicon"></span></a>
               </li>
             </ul>
@@ -130,35 +130,84 @@
             <div
               class="iphone15pro__titles bg-black w-full absolute z-10 text-center pt-[90px]"
             >
-              <h2 class="text-white text-[50px] font-semibold">
+              <h2 class="text-white text-[54px] font-semibold">
                 iPhone 15 Pro
               </h2>
-              <h3></h3>
-              <div></div>
+              <h3 class="text-white text-[28px] mt-1">
+                Titanium. So strong. So light. So Pro.
+              </h3>
+              <div class="text-blue-400 text-[21px] mt-3">
+                <a href="#" class="me-10"
+                  >Learn more <span class="ion-chevron-right"></span
+                ></a>
+                <a href="#">Buy <span class="ion-chevron-right"></span></a>
+              </div>
             </div>
             <div class="iphone15pro__box_image">
-              <div class="iphone15pro__image w-full h-[736px]"></div>
+              <div
+                class="iphone15pro__image large hidden lg:block w-full h-[740px]"
+              ></div>
+              <div
+                class="iphone15pro__image small block lg:hidden w-full h-[740px]"
+              ></div>
             </div>
           </a>
         </div>
       </section>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       <!--------- end sec_iphone15pro_dark -------->
+
+      <!--------- start sec_iphone15pro_light ------>
+      <section id="sec_iphone15pro_light" class="mt-4">
+        <div class="relative bg-transparent">
+          <a href="#">
+            <div
+              class="iphone15pro__titles bg-transparent w-full absolute z-10 text-center pt-[90px]"
+            >
+              <h2 class="text-black text-[54px] font-semibold">
+                iPhone 15 Pro
+              </h2>
+              <h3 class="text-black text-[28px] mt-1">
+                Titanium. So strong. So light. So Pro.
+              </h3>
+              <div class="text-blue-600 text-[21px] mt-3">
+                <a href="#" class="me-10"
+                  >Learn more <span class="ion-chevron-right"></span
+                ></a>
+                <a href="#">Buy <span class="ion-chevron-right"></span></a>
+              </div>
+            </div>
+            <div class="iphone15pro__box_image">
+              <div
+                class="iphone15pro__image large hidden lg:block w-full h-[740px]"
+              ></div>
+              <div
+                class="iphone15pro__image small block lg:hidden w-full h-[740px]"
+              ></div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!--------- end sec_iphone15pro_light ------>
     </main>
 
     <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script>
       $(document).ready(function () {
+        let timeOutDropDown = null;
         $(".store__titel").mouseenter(function () {
           $(".drop-down").slideDown(500);
           $("#main").css("filter", "blur(10px)");
           $(".drop-down").attr("data-status", "open");
+          clearTimeout(timeOutDropDown);
         });
         $(".store__titel").mouseleave(function () {
-          if ($(".drop-down").attr("data-status") == "open")
-            $(".drop-down").slideUp(500);
-          $("#main").css("filter", "blur(0)");
-          $(".drop-down").attr("data-status", "close");
+          timeOutDropDown = setTimeout(function () {
+            if ($(".drop-down").attr("data-status") == "open")
+              $(".drop-down").slideUp(500);
+            $("#main").css("filter", "blur(0)");
+            $(".drop-down").attr("data-status", "close");
+          }, 1000);
         });
       });
     </script>
