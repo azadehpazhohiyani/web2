@@ -44,5 +44,17 @@ body {
 }
 #sec_iphone15pro_light .iphone15pro__box_image .small {
   background-image: url(../image/iphone15-white-small.jpg);
-  background-size: 1250px 694px;
+  background-size: 1000px 548px;
+}
+#sec_apple-watch-series-9 .apple-watch__box_image .apple-watch__image {
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+#sec_apple-watch-series-9 .apple-watch__box_image .large {
+  background-image: url(../image/hero_apple_watch_series_9_order__d0fi9mb84dci_largetall_2x.jpg);
+  background-size: 3100px 740px;
+}
+#sec_apple-watch-series-9 .apple-watch__box_image .small {
+  background-image: url(../image/hero_apple_watch_series_9_order__d0fi9mb84dci_small_2x.jpg);
+  background-size: cover;
 }
