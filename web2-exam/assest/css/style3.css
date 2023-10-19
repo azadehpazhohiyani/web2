@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Vazirmatn, sans-serif;
+  direction: rtl;
+}
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+#main {
+  background-color: #fbf5f4;
+}
+.education_block_list_layout .box-image .image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.education_block_list_layout .box-1 {
+  background-image: url(../image/box1.jpg);
+}
+.education_block_list_layout .box-2 {
+  background-image: url(../image/box2.jpg);
+}
+.education_teacher {
+  font-size: 12px;
+}
+.education_teacher strong {
+  font-size: 14px;
+}
+.episodes p {
+  font-size: 14px;
+}
+.cources_info_style {
+  width: 35px;
+  height: 35px;
+}
+.cources_info_style span {
+  top: 3px;
+}
+.education_block_body h4 {
+  height: 50px;
+}
