@@ -80,3 +80,50 @@ $theme-colors: (
   "light":      $light,
   "dark":       $dark
 ) !default;
+
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+
+$col_num : 12 ;
+
+$sizes :(sm :10px , md : 14px , lg :20px , xl : 30px , xxl :40px);
+
+$margins : (0 : 0rem , 1 : 0.25rem , 2 : 0.5rem , 3 : 1rem , 4 : 1.5rem , 5 : 2rem , 6 : 3rem);
+
+$paddings : (0 : 0rem , 1 : 0.25rem , 2 : 0.5rem , 3 : 1rem , 4 : 1.5rem , 5 : 2rem , 6 : 3rem);
+
+$pc_size : 1000px ;
+
+$tablet_size : 800px ;
+
+$phone_size : 600px ;
+
+$xs_size : 500px ;
+
+$small : 576px ;
+
+$medium : 768px ;
+
+$large : 992px ;
+
+$xl-large : 1200px ;
+
+$xxl-large : 1400px ;
+
+$border : 1px solid $gray-500;
+
+$border-radius : 7px ;
+
+$width-full : 100%;
+
+$main-padding : 20px 15px ;
+
+$secondary-padding : 15px ;

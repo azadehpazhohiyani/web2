@@ -1,1 +1,158 @@
-@import "variables"
+@import "variables";
+@import "reset";
+@import "loops";
+@import "mixins";
+@import "displays";
+
+
+.body {
+    direction: rtl;
+    font-family: Vazirmatn, sans-serif;
+}
+.w-100 {
+    width: $width-full;
+}
+.contianer {
+   max-width: 1500px;
+   margin: 0 auto;
+ 
+    @include xl-large {
+        max-width: 1200px;
+    }
+    @include large {
+        max-width: 992px;
+    }
+    @include medium {
+        max-width: 768px;
+    }
+    @include small {
+        max-width: 576px;
+    }
+}
+
+.row {
+    @include d_flex_row;
+}
+.text-center {
+    text-align: center;
+}
+.text-start {
+    text-align: start;
+}
+.text-end {
+    text-align: end;
+}
+.text-justify {
+    text-align: justify;
+}
+.fw_bold {
+    font-weight: bold;
+}
+.bg-primery {
+    background-color: $primary;
+    }
+.bg-secondary {
+    background-color: $secondary;
+    }
+.bg-danger {
+    background-color: $danger;
+    }
+ .bg-light-gray {
+    background-color: $gray-400;
+ }   
+ .text-black {
+    color: $black;
+ }
+ .text-with {
+    color :$white;
+ }
+ .text-secondary {
+    color: $secondary;
+ }
+ .text-danger {
+    color :$danger;
+ }
+ .text-muted {
+    color: $gray-600;
+ }
+    .box {
+        padding:0 20px;
+        width: 33.3%;
+        margin-top: 30px;
+         @include large {
+            width: 50%;
+         }
+         @include medium {
+            width: 100%;
+         }
+    }
+    .border {
+        border: $border;
+    }
+    .border-top {
+        border-top: $border;
+    }
+    .border-bottom {
+        border-bottom: $border;
+    }
+    .border-start {
+        border-inline-start: $border;
+    }
+    .border-end {
+        border-inline-end: $border;
+    }
+    .rownded {
+        border-radius: $border-radius;
+    }
+    .rownded_circle {
+        border-radius: 50%;
+    }
+    .overflow {
+        overflow: hidden;
+    }
+    .ratio_1 {
+        aspect-ratio: 1/1;
+    }
+    .card {
+        border-radius:$border-radius ;
+        width: $width-full;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        overflow: hidden;
+        .card_image_top {
+            border-top-right-radius:$border-radius ;
+            border-top-left-radius:$border-radius ;
+            width: $width-full;
+            .card_image {
+                @include bg-image;
+               }
+               .image-1 {
+                background-image: url(../image/photo-2.png);
+            }
+            .image-2 {
+                background-image: url(../image/photo-3.png);
+            }
+            .image-3 {
+                background-image: url(../image/photo-1.jpg);
+            }
+          }
+          .card_body {
+            padding: $main-padding;
+            p {
+                height: 60px;
+                transition: 0.5s;
+            }
+            p:hover {
+                color: $red;
+            }
+          }
+          .card_fotter {
+            border-top: $border;
+            padding: $secondary-padding;
+            .image {
+                width: 40px;
+                height: 40px;
+            }
+          }
+    }
+  
+   

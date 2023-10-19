@@ -1,0 +1,63 @@
+@import "variables";
+
+@mixin pc {
+    @media screen and (max-width:$pc_size) {
+        @content ;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width:$tablet_size) {
+        @content ;
+    }
+}
+
+@mixin phone {
+    @media screen and (max-width:$phone_size) {
+        @content ;
+    }
+}
+@mixin xxl-large {
+    @media screen and (max-width:$xxl-large) {
+        @content ;
+    }
+}
+@mixin xl-large {
+    @media screen and (max-width:$xl-large) {
+        @content ;
+    }
+}
+@mixin large {
+    @media screen and (max-width:$large) {
+        @content ;
+    }
+}
+@mixin medium {
+    @media screen and (max-width:$medium) {
+        @content ;
+    }
+}
+@mixin small {
+    @media screen and (max-width:$small) {
+        @content ;
+    }
+}
+@mixin xs {
+    @media screen and (max-width:$xs_size) {
+        @content ;
+    }
+}
+
+
+@mixin d_flex_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+@mixin bg_image {
+    aspect-ratio: 4/3;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

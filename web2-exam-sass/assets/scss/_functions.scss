@@ -1,0 +1,6 @@
+@import "variables";
+
+@function calc_col($column_total_count , $column_count){
+    @return (100% / $column_total_count) * $column_count ;
+}
+

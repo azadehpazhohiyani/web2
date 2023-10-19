@@ -1,0 +1,68 @@
+@import "variables";
+
+@import "functions";
+
+@each $name,$size in $sizes {
+    .font-#{$name} {
+        font-size: $size;
+    }
+}
+
+@each $name,$size in $margins {
+    .m-#{$name} {
+        margin: $size;
+    }
+    .mt-#{$name} {
+        margin-top: $size;
+    }
+    .mb-#{$name} {
+        margin-bottom: $size;
+    }
+    .mx-#{$name} {
+        margin-inline-start: $size;
+        margin-inline-end: $size;
+    }
+    .my-#{$name} {
+        margin-top: $size;
+        margin-bottom: $size;
+    }
+    .ms-#{$name} {
+        margin-inline-start: $size;
+    }
+    .me-#{$name} {
+        margin-inline-end: $size;
+    }
+}
+
+
+@each $name,$size in $paddings {
+    .p-#{$name} {
+        padding: $size;
+    }
+    .pt-#{$name} {
+        padding-top: $size;
+    }
+    .pb-#{$name} {
+        padding-bottom: $size;
+    }
+    .px-#{$name} {
+        padding-inline-start: $size;
+        padding-inline-end: $size;
+    }
+    .py-#{$name} {
+        padding-top: $size;
+        padding-bottom: $size;
+    }
+    .ps-#{$name} {
+        padding-inline-start: $size;
+    }
+    .pe-#{$name} {
+        padding-inline-end: $size;
+    }
+}
+
+@for $i from 1 through $col_num {
+    .col-#{$i} {
+        width: calc_col($col_num,$i);
+    }
+}
