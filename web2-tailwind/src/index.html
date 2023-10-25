@@ -23,6 +23,7 @@
       rel="stylesheet"
       href="../node_modules/swiper/swiper-bundle.min.css"
     />
+
     <link rel="stylesheet" href="../assest/css/style.css" />
     <link rel="stylesheet" href="../dist/output.css" />
   </head>
@@ -73,7 +74,7 @@
                     class="w-[20px] h-[20px] block"
                 /></a>
               </li>
-              <li class="text-2xl text-white block lg:hidden">
+              <li class="text-2xl text-white block lg:hidden bar_icon">
                 <a href="#"><span class="ion-navicon"></span></a>
               </li>
             </ul>
@@ -165,6 +166,23 @@
           </div>
         </div>
       </nav>
+      <div
+        class="saide_nav absolute top-[50px] bg-bgDropdDown text-[28px] text-white leading-[60px] px-[50px] py-[30px] w-full font-bold hidden"
+      >
+        <ul>
+          <li><a href="#">Store</a></li>
+          <li><a href="#">Mac</a></li>
+          <li><a href="#">iPad</a></li>
+          <li><a href="#">iPhone</a></li>
+          <li><a href="#">Watch</a></li>
+          <li><a href="#">Vision</a></li>
+          <li><a href="#">AirPods</a></li>
+          <li><a href="#">TV & Home</a></li>
+          <li><a href="#">Entertainment</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
     </header>
 
     <!----- end header ------->
@@ -844,6 +862,13 @@
             $(this).next(".accordion_body").slideDown(300);
             $(this).children(".plusminus").text("-");
           }
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".bar_icon").click(function () {
+          $(".saide_nav").slideToggle(500);
         });
       });
     </script>
