@@ -19,13 +19,17 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Puddles&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="../node_modules/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="../assest/css/style.css" />
     <link rel="stylesheet" href="../dist/output.css" />
   </head>
   <body>
     <!----- start header ------->
     <header id="header" class="fixed top-0 left-0 w-full z-50">
-      <nav class="bg-bgHeader w-full">
+      <nav class="bg-bgHeader w-full relative">
         <div
           class="container mx-auto flex justify-between items-center lg:justify-center px-3"
         >
@@ -38,54 +42,12 @@
             <ul
               class="text-white flex justify-center items-center text-xs px-5"
             >
-              <li class="store__titel" data-target-dropdown-id="1">
+              <li class="navbar__title" data-target-dropdown-id="1">
                 <a href="#">Store</a>
-                <div
-                  class="drop-down w-full absolute bg-bgDropdDown left-0 top-[50px] hidden"
-                  data-dropdown-id="1"
-                  data-status="open"
-                >
-                  <div class="container mx-auto max-w-[1000px]">
-                    <div
-                      class="flex justify-start items-start gap-x-8 py-[35px]"
-                    >
-                      <div class="shop text-white">
-                        <ul>
-                          <li class="text-gray-500 text-sm">shop</li>
-                          <li><a href="#">Shop the Latest</a></li>
-                          <li><a href="#">Mac</a></li>
-                          <li><a href="#">iPad</a></li>
-                          <li><a href="#">iPhone</a></li>
-                          <li><a href="#">Apple Watch</a></li>
-                          <li><a href="#">Accessories</a></li>
-                        </ul>
-                      </div>
-                      <div class="quickLiks">
-                        <ul>
-                          <li class="text-gray-500 text-sm">Quick Links</li>
-                          <li><a href="#">Find a Store</a></li>
-                          <li><a href="#">order status</a></li>
-                          <li><a href="#">Apple Trade In</a></li>
-                          <li><a href="#">Financing</a></li>
-                        </ul>
-                      </div>
-                      <div class="shop-special-stire">
-                        <ul>
-                          <li class="text-gray-500 text-sm">
-                            Shop Special Stores
-                          </li>
-                          <li><a href="#">Certified Refurbished</a></li>
-                          <li><a href="#">Education</a></li>
-                          <li><a href="#">Business</a></li>
-                          <li><a href="#">Veterans and Military</a></li>
-                          <li><a href="#">Government</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </li>
-              <li><a href="#">Mac</a></li>
+              <li class="navbar__title" data-target-dropdown-id="2">
+                <a href="#">Mac</a>
+              </li>
               <li><a href="#">iPad</a></li>
               <li><a href="#">iPhone</a></li>
               <li><a href="#">Watch</a></li>
@@ -117,6 +79,91 @@
             </ul>
           </div>
         </div>
+        <div
+          class="drop-down w-full absolute bg-bgDropdDown left-0 top-[50px] hidden"
+          data-status="close"
+        >
+          <div class="container mx-auto max-w-[950px]">
+            <div class="hidden item" data-dropdown-id="1" data-item="hidden">
+              <div class="flex justify-start items-start gap-x-8 py-[35px]">
+                <div class="sub_title_text_large text-white">
+                  <ul>
+                    <li class="text-gray-500 text-sm">shop</li>
+                    <li><a href="#">Shop the Latest</a></li>
+                    <li><a href="#">Mac</a></li>
+                    <li><a href="#">iPad</a></li>
+                    <li><a href="#">iPhone</a></li>
+                    <li><a href="#">Apple Watch</a></li>
+                    <li><a href="#">Accessories</a></li>
+                  </ul>
+                </div>
+                <div class="sub_title_text_small text-white">
+                  <ul>
+                    <li class="text-gray-500 text-sm">Quick Links</li>
+                    <li><a href="#">Find a Store</a></li>
+                    <li><a href="#">order status</a></li>
+                    <li><a href="#">Apple Trade In</a></li>
+                    <li><a href="#">Financing</a></li>
+                  </ul>
+                </div>
+                <div class="sub_title_text_small text-white">
+                  <ul>
+                    <li class="text-gray-500 text-sm">Shop Special Stores</li>
+                    <li><a href="#">Certified Refurbished</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Veterans and Military</a></li>
+                    <li><a href="#">Government</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="hidden" data-dropdown-id="2" data-item="hidden">
+              <div class="flex justify-start items-start gap-x-8 py-[35px]">
+                <div>
+                  <ul class="sub_title_text_large text-white">
+                    <li class="text-gray-500 text-sm">Explore Mac</li>
+                    <li><a href="#">Explore All Mac</a></li>
+                    <li><a href="#">MacBook Air</a></li>
+                    <li><a href="#">MacBook Pro</a></li>
+                    <li><a href="#">Mac mini</a></li>
+                    <li><a href="#">Mac mini</a></li>
+                    <li><a href="#">Mac Studio</a></li>
+                    <li><a href="#">Mac Pro</a></li>
+                    <li><a href="#">Displays</a></li>
+                  </ul>
+                  <ul class="mt-3 leading-[0.1]">
+                    <li class="text-[13px]">Compare Mac</li>
+                    <li class="text-[13px]">Mac Does That</li>
+                  </ul>
+                </div>
+                <div class="sub_title_text_small text-white">
+                  <ul>
+                    <li class="text-gray-500 text-sm">Shop Mac</li>
+                    <li><a href="#">shop mac</a></li>
+                    <li><a href="#">Mac Accessories</a></li>
+                    <li><a href="#">Apple Trade In</a></li>
+                    <li><a href="#">Financing</a></li>
+                  </ul>
+                </div>
+                <div class="sub_title_text_small text-white">
+                  <ul>
+                    <li class="text-gray-500 text-sm">More from Mac</li>
+                    <li><a href="#">Mac Support</a></li>
+                    <li><a href="#">AppleCare+ for Mac</a></li>
+                    <li><a href="#">macOS Sonoma</a></li>
+                    <li><a href="#">Apps by Apple</a></li>
+                    <li><a href="#">Continuity</a></li>
+                    <li><a href="#">iCloud+</a></li>
+                    <li><a href="#">Mac for Business</a></li>
+                    <li><a href="#">Education</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -137,19 +184,17 @@
                 Titanium. So strong. So light. So Pro.
               </h3>
               <div class="text-blue-400 text-[17px] lg:text-[21px] mt-3">
-                <a href="#" class="me-10"
+                <a href="#" class="me-10 hover:underline"
                   >Learn more <span class="ion-chevron-right ms-2"></span
                 ></a>
-                <a href="#">Buy <span class="ion-chevron-right ms-2"></span></a>
+                <a href="#" class="hover:underline"
+                  >Buy <span class="ion-chevron-right ms-2"></span
+                ></a>
               </div>
             </div>
-            <div class="iphone15pro__box_image">
-              <div
-                class="iphone15pro__image large hidden lg:block w-full h-[740px]"
-              ></div>
-              <div
-                class="iphone15pro__image small block lg:hidden w-full h-[600px]"
-              ></div>
+            <div class="box_image">
+              <div class="image large hidden lg:block w-full h-[740px]"></div>
+              <div class="image small block lg:hidden w-full h-[600px]"></div>
             </div>
           </a>
         </div>
@@ -170,19 +215,17 @@
                 New camera. New design. Newphoria.
               </h3>
               <div class="text-blue-600 text-[17px] lg:text-[21px] mt-3">
-                <a href="#" class="me-10"
+                <a href="#" class="me-10 hover:underline"
                   >Learn more <span class="ion-chevron-right ms-2"></span
                 ></a>
-                <a href="#">Buy <span class="ion-chevron-right ms-2"></span></a>
+                <a href="#" class="hover:underline"
+                  >Buy <span class="ion-chevron-right ms-2"></span
+                ></a>
               </div>
             </div>
-            <div class="iphone15pro__box_image">
-              <div
-                class="iphone15pro__image large hidden lg:block w-full h-[740px]"
-              ></div>
-              <div
-                class="iphone15pro__image small block lg:hidden w-full h-[548px]"
-              ></div>
+            <div class="box_image">
+              <div class="image large hidden lg:block w-full h-[740px]"></div>
+              <div class="image small block lg:hidden w-full h-[548px]"></div>
             </div>
           </a>
         </div>
@@ -206,44 +249,601 @@
                 Smarter. Brighter. Mightier.
               </h3>
               <div class="text-blue-400 text-[17px] lg:text-[21px] mt-3">
-                <a href="#" class="me-10"
+                <a href="#" class="me-10 hover:underline"
                   >Learn more <span class="ion-chevron-right ms-2"></span
                 ></a>
-                <a href="#">Buy <span class="ion-chevron-right ms-2"></span></a>
+                <a href="#" class="hover:underline"
+                  >Buy <span class="ion-chevron-right ms-2"></span
+                ></a>
               </div>
             </div>
-            <div class="apple-watch__box_image">
-              <div
-                class="apple-watch__image large hidden lg:block w-full h-[740px]"
-              ></div>
-              <div
-                class="apple-watch__image small block lg:hidden w-full h-[624px]"
-              ></div>
+            <div class="box_image">
+              <div class="image large hidden lg:block w-full h-[740px]"></div>
+              <div class="image small block lg:hidden w-full h-[624px]"></div>
             </div>
           </a>
         </div>
       </section>
 
       <!--------- end sec_apple-watch-series-9 ------>
+
+      <!--------- start collection-module ------>
+      <section id="collection-module" class="mt-3 px-[12px]">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div class="relative bg-transparent w-full">
+            <a href="#">
+              <div
+                class="ipad__titles bg-transparent w-full absolute top-0 z-10 text-center pt-[50px]"
+              >
+                <h4 class="text-black text-[32px] lg:text-[40px] font-semibold">
+                  iPad
+                </h4>
+                <h5 class="text-black text-[19px] lg:text-[21px] mt-1">
+                  Lovable. Drawable. Magical.
+                </h5>
+                <div class="text-blue-600 text-[17px] lg:text-[20px] mt-3">
+                  <a href="#" class="me-10 hover:underline"
+                    >Learn more <span class="ion-chevron-right ms-2"></span
+                  ></a>
+                  <a href="#" class="hover:underline"
+                    >Buy <span class="ion-chevron-right ms-2"></span
+                  ></a>
+                </div>
+              </div>
+              <div class="box_image">
+                <div class="image box-1 w-full h-[550px] md:h-[650px]"></div>
+              </div>
+            </a>
+          </div>
+          <div class="relative bg-transparent w-full">
+            <a href="#">
+              <div
+                class="ipad__titles bg-transparent w-full absolute top-[365px] md:top-[435px] z-10 text-center"
+              >
+                <h4 class="text-black text-[32px] lg:text-[40px] font-semibold">
+                  <span
+                    class="ion-social-apple me-1 text-[35px] lg:text-[43px]"
+                  ></span
+                  >Vision Pro
+                </h4>
+                <h5 class="text-black text-[19px] lg:text-[21px]">
+                  Welcome to the era of spatial computing.
+                </h5>
+                <p class="text-gray-500 mt-2">
+                  Available early next year in the U.S.
+                </p>
+                <div class="text-blue-600 text-[17px] lg:text-[20px] mt-4">
+                  <a href="#" class="hover:underline"
+                    >Learn more <span class="ion-chevron-right ms-1"></span
+                  ></a>
+                </div>
+              </div>
+              <div class="box_image">
+                <div class="image box-2 w-full h-[550px] md:h-[650px]"></div>
+              </div>
+            </a>
+          </div>
+          <div class="relative bg-transparent w-full">
+            <a href="#">
+              <div
+                class="ipad__titles bg-transparent w-full absolute top-0 z-10 text-center pt-[50px]"
+              >
+                <h4 class="text-black text-[32px] lg:text-[40px] font-semibold">
+                  MacBook Air 15”
+                </h4>
+                <h5 class="text-black text-[19px] lg:text-[21px] mt-1">
+                  Impressively big. Impossibly thin.
+                </h5>
+                <div class="text-blue-600 text-[17px] lg:text-[20px] mt-3">
+                  <a href="#" class="me-10 hover:underline"
+                    >Learn more <span class="ion-chevron-right ms-2"></span
+                  ></a>
+                  <a href="#" class="hover:underline"
+                    >Buy <span class="ion-chevron-right ms-2"></span
+                  ></a>
+                </div>
+              </div>
+              <div class="box_image">
+                <div class="image box-3 w-full h-[550px] md:h-[650px]"></div>
+              </div>
+            </a>
+          </div>
+          <div class="relative bg-transparent w-full">
+            <a href="#">
+              <div
+                class="ipad__titles bg-transparent w-full absolute top-0 z-10 text-center pt-[50px]"
+              >
+                <h4 class="text-white text-[32px] lg:text-[40px] font-semibold">
+                  AirPods Pro
+                </h4>
+                <h5 class="text-white text-[19px] lg:text-[21px] mt-1">
+                  Adaptive Audio. Now playing.
+                </h5>
+                <div class="text-blue-600 text-[17px] lg:text-[20px] mt-3">
+                  <a href="#" class="me-10 hover:underline"
+                    >Learn more <span class="ion-chevron-right ms-2"></span
+                  ></a>
+                  <a href="#" class="hover:underline"
+                    >Buy <span class="ion-chevron-right ms-2"></span
+                  ></a>
+                </div>
+              </div>
+              <div class="box_image">
+                <div class="image box-4 w-full h-[550px] md:h-[650px]"></div>
+              </div>
+            </a>
+          </div>
+          <div class="relative bg-transparent w-full">
+            <a href="#">
+              <div
+                class="ipad__titles bg-transparent w-full absolute top-0 z-10 text-center pt-[50px]"
+              >
+                <h4 class="text-black text-[32px] lg:text-[40px] font-semibold">
+                  <span
+                    class="ion-social-apple me-1 text-[35px] lg:text-[43px]"
+                  ></span>
+                  Trade In
+                </h4>
+                <h5 class="text-black text-[19px] lg:text-[21px] mt-1">
+                  Get $200-$650 in credit when <br />
+                  you trade in iPhone 11 or higher.
+                </h5>
+                <div class="text-blue-600 text-[16px] lg:text-[20px] mt-3">
+                  <a href="#" class="hover:underline"
+                    >See what your device is worth
+                    <span class="ion-chevron-right ms-2"></span
+                  ></a>
+                </div>
+              </div>
+              <div class="box_image">
+                <div class="image box-5 w-full h-[550px] md:h-[650px]"></div>
+              </div>
+            </a>
+          </div>
+          <div class="relative bg-transparent w-full">
+            <a href="#">
+              <div
+                class="ipad__titles bg-transparent w-full absolute top-0 z-10 text-center pt-[50px]"
+              >
+                <h4 class="text-black text-[32px] lg:text-[40px] font-semibold">
+                  <span
+                    class="ion-social-apple me-1 text-[35px] lg:text-[43px]"
+                  ></span>
+                  Card
+                </h4>
+                <h5 class="text-black text-[19px] lg:text-[21px] mt-1">
+                  Get up to 3% Daily Cash back <br />
+                  with every purchase.
+                </h5>
+                <div class="text-blue-600 text-[17px] lg:text-[20px] mt-3">
+                  <a href="#" class="me-10 hover:underline"
+                    >Learn more <span class="ion-chevron-right ms-2"></span
+                  ></a>
+                  <a href="#" class="hover:underline"
+                    >Apply now <span class="ion-chevron-right ms-2"></span
+                  ></a>
+                </div>
+              </div>
+              <div class="box_image">
+                <div class="image box-6 w-full h-[550px] md:h-[650px]"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!--------- start collection-module ------>
+
+      <!--------- start slider ------>
+
+      <div class="main-slider">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../assest/image/1960x1102 (1).jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assest/image/1960x1102 (2).jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assest/image/1960x1102 (3).jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assest/image/1960x1102 (4).jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assest/image/1960x1102 (5).jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assest/image/1960x1102 (6).jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assest/image/1960x1102 (7).jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assest/image/1960x1102 (8).jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assest/image/1960x1102 (9).jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assest/image/1960x1102.jpg" alt="" />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!--------- end slider------>
+
+      <!--------- start footer ------>
+      <footer id="footer" class="bg-bgfooter">
+        <div
+          class="container max-w-[850px] mx-auto py-[25px] text-justify px-4"
+        >
+          <ul
+            class="footer_description text-gray-500 border-solid border-b-2 border-gray-200"
+          >
+            <li class="text-[12px]">
+              1. Trade-in values will vary based on the condition, year, and
+              configuration of your eligible trade-in device. Not all devices
+              are eligible for credit. You must be at least 18 years old to be
+              eligible to trade in for credit or for an Apple Gift Card.
+              Trade-in value may be applied toward qualifying new device
+              purchase, or added to an Apple Gift Card. Actual value awarded is
+              based on receipt of a qualifying device matching the description
+              provided when estimate was made. Sales tax may be assessed on full
+              value of a new device purchase. In-store trade-in requires
+              presentation of a valid photo ID (local law may require saving
+              this information). Offer may not be available in all stores, and
+              may vary between in-store and online trade-in. Some stores may
+              have additional requirements. Apple or its trade-in partners
+              reserve the right to refuse or limit quantity of any trade-in
+              transaction for any reason. More details are available from
+              Apple’s trade-in partner for trade-in and recycling of eligible
+              devices. Restrictions and limitations may apply.
+            </li>
+            <li class="mt-3 text-[12px]">
+              Apple Vision Pro has not been authorized as required by the rules
+              of the Federal Communications Commission. This device is not, and
+              may not be, offered for sale or lease, or sold or leased, until
+              authorization is obtained.
+            </li>
+            <li class="mt-3 text-[12px]">
+              Apple Vision Pro will be available early next year on
+              <a href="#" class="text-gray-700 underline">apple.com</a> and at
+              Apple retail stores in the U.S.
+            </li>
+            <li class="mt-3 text-[12px]">
+              To access and use all Apple Card features and products available
+              only to Apple Card users, you must add Apple Card to Wallet on an
+              iPhone or iPad that supports and has the latest version of iOS or
+              iPadOS. Apple Card is subject to credit approval, available only
+              for qualifying applicants in the United States, and issued by
+              Goldman Sachs Bank USA, Salt Lake City Branch.
+            </li>
+            <li class="mt-3 text-[12px]">
+              If you reside in the U.S. territories, please call Goldman Sachs
+              at 877-255-5923 with questions about Apple Card.
+            </li>
+            <li class="mt-3 text-[12px]">
+              Learn more about how Apple&nbsp;Card applications are evaluated at
+              <a href="#" class="text-gray-700 underline"
+                >support.apple.com/kb/HT209218</a
+              >
+            </li>
+            <li class="mt-3 mb-7 text-[12px]">
+              A subscription is required for Apple TV+.
+            </li>
+          </ul>
+          <div
+            class="links flex justify-between align-baseline text-[12px] py-0 md:py-[25px]"
+          >
+            <div class="hidden md:block">
+              <ul>
+                <li class="text-gray-800 text font-bold">Shop and Learn</li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Mac</a></li>
+                <li><a href="#">iPad</a></li>
+                <li><a href="#">iPhone</a></li>
+                <li><a href="#">Watch</a></li>
+                <li><a href="#">Vision</a></li>
+                <li><a href="#">AirPods</a></li>
+                <li><a href="#">TV & Home</a></li>
+                <li><a href="#">AirTag</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Gift Cards</a></li>
+              </ul>
+              <ul class="mt-3">
+                <li class="text-gray-800 font-bold">Apple Wallet</li>
+                <li><a href="#">Wallet</a></li>
+                <li><a href="#">Apple Card</a></li>
+                <li><a href="#">Apple Pay</a></li>
+                <li><a href="#">Apple Cash</a></li>
+              </ul>
+            </div>
+            <div class="hidden md:block">
+              <ul>
+                <li class="text-gray-800 font-bold">Shop and Learn</li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Manage Your Apple ID</a></li>
+                <li><a href="#">Apple Store Account</a></li>
+                <li><a href="#">iCloud.com</a></li>
+              </ul>
+              <ul class="mt-3">
+                <li class="text-gray-800 font-bold">Entertainment</li>
+                <li><a href="#">Apple One</a></li>
+                <li><a href="#">Apple TV+</a></li>
+                <li><a href="#">Apple Music</a></li>
+                <li><a href="#">Apple Arcade</a></li>
+                <li><a href="#">Apple Fitness+</a></li>
+                <li><a href="#">Apple News+</a></li>
+                <li><a href="#">Apple Podcasts</a></li>
+                <li><a href="#">Apple Books</a></li>
+                <li><a href="#">App Store</a></li>
+              </ul>
+            </div>
+            <div class="hidden md:block">
+              <ul>
+                <li class="text-gray-800 font-bold">Apple Store</li>
+                <li><a href="#">Find a Store</a></li>
+                <li><a href="#">Genius Bar</a></li>
+                <li><a href="#">Today at Apple</a></li>
+                <li><a href="#">Apple Camp</a></li>
+                <li><a href="#">Apple Store App</a></li>
+                <li><a href="#">Certified Refurbished</a></li>
+                <li><a href="#">Apple Trade In</a></li>
+                <li><a href="#">Financing</a></li>
+                <li><a href="#">Carrier Deals at Apple</a></li>
+                <li><a href="#">Order Status</a></li>
+                <li><a href="#">Shopping Help</a></li>
+              </ul>
+            </div>
+            <div class="hidden md:block">
+              <ul>
+                <li class="text-gray-800 font-bold">For Business</li>
+                <li><a href="#">Apple and Business</a></li>
+                <li><a href="#">Shop for Business</a></li>
+              </ul>
+              <ul class="mt-3">
+                <li class="text-gray-800 font-bold">For Education</li>
+                <li><a href="#">Apple and Education</a></li>
+                <li><a href="#">Shop for K-12</a></li>
+                <li><a href="#">Shop for College</a></li>
+              </ul>
+              <ul class="mt-3">
+                <li class="text-gray-800 font-bold">For Healthcare</li>
+                <li><a href="#">Apple in Healthcare</a></li>
+                <li><a href="#">Health on Apple Watch</a></li>
+                <li><a href="#">Health Records on iPhone</a></li>
+              </ul>
+              <ul class="mt-3">
+                <li class="text-gray-800 font-bold">For Government</li>
+                <li><a href="#">Shop for Government</a></li>
+                <li><a href="#">Shop for Veterans and Military</a></li>
+              </ul>
+            </div>
+            <div class="hidden md:block">
+              <ul>
+                <li class="text-gray-800 text font-bold">Apple Values</li>
+                <li><a href="#">Accessibility</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Environment</a></li>
+                <li><a href="#">Inclusion and Diversity</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Racial Equity and Justice</a></li>
+                <li><a href="#">Supplier Responsibility</a></li>
+              </ul>
+              <ul class="mt-3">
+                <li class="text-gray-800 font-bold">About Apple</li>
+                <li><a href="#">Newsroom</a></li>
+                <li><a href="#">Apple Leadership</a></li>
+                <li><a href="#">Career Opportunities</a></li>
+                <li><a href="#">Investors</a></li>
+                <li><a href="#">Ethics & Compliance</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact Apple</a></li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="text-[13px] text-gray-600 item_footer block md:hidden pe-3"
+          >
+            <ul>
+              <li class="accordion_head flex justify-between items-center">
+                <button>Shop and Learn</button>
+                <span class="plusminus">+</span>
+              </li>
+              <li class="accordion_body hidden">
+                <ul>
+                  <li><a href="#">Store</a></li>
+                  <li><a href="#">Mac</a></li>
+                  <li><a href="#">iPad</a></li>
+                  <li><a href="#">iPhone</a></li>
+                  <li><a href="#">Watch</a></li>
+                  <li><a href="#">Vision</a></li>
+                  <li><a href="#">AirPods</a></li>
+                  <li><a href="#">TV & Home</a></li>
+                  <li><a href="#">AirTag</a></li>
+                  <li><a href="#">Accessories</a></li>
+                  <li><a href="#">Gift Cards</a></li>
+                </ul>
+              </li>
+              <li class="accordion_head flex justify-between items-center">
+                <button>Apple Wallet</button>
+                <span class="plusminus">+</span>
+              </li>
+              <li class="accordion_body hidden">
+                <ul>
+                  <li><a href="#">Store</a></li>
+                  <li><a href="#">Mac</a></li>
+                  <li><a href="#">iPad</a></li>
+                  <li><a href="#">iPhone</a></li>
+                  <li><a href="#">Watch</a></li>
+                  <li><a href="#">Vision</a></li>
+                  <li><a href="#">AirPods</a></li>
+                  <li><a href="#">TV & Home</a></li>
+                  <li><a href="#">AirTag</a></li>
+                  <li><a href="#">Accessories</a></li>
+                  <li><a href="#">Gift Cards</a></li>
+                </ul>
+              </li>
+              <li class="flex justify-between items-center">
+                <button>Account</button>
+                <span>+</span>
+              </li>
+              <li class="flex justify-between items-center">
+                <button>Entertainment</button>
+                <span>+</span>
+              </li>
+              <li class="flex justify-between items-center">
+                <button>Apple Store</button>
+                <span>+</span>
+              </li>
+              <li class="flex justify-between items-center">
+                <button>For Business</button>
+                <span>+</span>
+              </li>
+              <li class="flex justify-between items-center">
+                <button>For Education</button>
+                <span>+</span>
+              </li>
+              <li class="flex justify-between items-center">
+                <button>For Healthcare</button>
+                <span>+</span>
+              </li>
+              <li class="flex justify-between items-center">
+                <button>For Government</button>
+                <span>+</span>
+              </li>
+              <li class="flex justify-between items-center">
+                <button>Apple Values</button>
+                <span>+</span>
+              </li>
+              <li class="flex justify-between items-center">
+                <button>About Apple</button>
+                <span>+</span>
+              </li>
+            </ul>
+          </div>
+          <div class="text-[12px] text-gray-500 border-b-2 py-[12px]">
+            More ways to shop:
+            <a href="#" class="underline text-blue-500">Find an Apple Store</a>
+            or
+            <a href="#" class="underline text-blue-500">other retailer</a> near
+            you. Or call 1-800-MY-APPLE
+          </div>
+          <div
+            class="flex justify-between items-center flex-wrap text-[12px] py-4 text-gray-500"
+          >
+            <div class="mt-3 md:mt-0">
+              Copyright © 2023 Apple Inc. All rights reserved.
+            </div>
+            <div class="footer_setting mt-3 md:mt-0">
+              <a href="#" class="border-r-2 border-gray-500 px-2"
+                >Privacy Policy</a
+              >
+              <a href="#" class="border-r-2 border-gray-500 px-2"
+                >Terms of Use</a
+              >
+              <a href="#" class="border-r-2 border-gray-500 px-2"
+                >Sales and Refunds</a
+              >
+              <a href="#" class="border-r-2 border-gray-500 px-2">Legal</a>
+              <a href="#" class="px-2">Site Map</a>
+            </div>
+            <div class="mt-3 md:mt-0">United States</div>
+          </div>
+        </div>
+      </footer>
+
+      <!--------- end footer ------->
     </main>
 
     <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        centeredSlides: true,
+        spaceBetween: 20,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          1000: {
+            slidesPerView: 2,
+          },
+        },
+      });
+    </script>
     <script>
       $(document).ready(function () {
         let timeOutDropDown = null;
-        $(".store__titel").mouseenter(function () {
-          $(".drop-down").slideDown(500);
-          $("#main").css("filter", "blur(10px)");
-          $(".drop-down").attr("data-status", "open");
-          clearTimeout(timeOutDropDown);
+        $(".navbar__title").mouseenter(function () {
+          let id = $(this).attr("data-target-dropdown-id");
+          if ($(".drop-down").attr("data-status") == "open") {
+            $($("[data-dropdown-id]").attr("data-item", "show")).css(
+              "display",
+              "none"
+            );
+            $(`[data-dropdown-id = ${id}]`).css("display", "block");
+
+            $(`[data-dropdown-id = ${id}]`).attr("data-item", "show");
+            clearTimeout(timeOutDropDown);
+          } else {
+            $($("[data-dropdown-id]").attr("data-item", "show")).css(
+              "display",
+              "none"
+            );
+            $(`[data-dropdown-id = ${id}]`).css("display", "block");
+            $(".drop-down").slideDown(500);
+            $("#main").css("filter", "blur(10px)");
+            $(".drop-down").attr("data-status", "open");
+            $(`[data-dropdown-id = ${id}]`).attr("data-item", "show");
+            clearTimeout(timeOutDropDown);
+          }
         });
-        $(".store__titel").mouseleave(function () {
-          timeOutDropDown = setTimeout(function () {
-            if ($(".drop-down").attr("data-status") == "open")
+        $(".navbar").mouseleave(function () {
+          let id = $(this).attr("data-target-dropdown-id");
+          if ($(".drop-down").attr("data-status") == "open") {
+            timeOutDropDown = setTimeout(function () {
               $(".drop-down").slideUp(500);
-            $("#main").css("filter", "blur(0)");
-            $(".drop-down").attr("data-status", "close");
-          }, 1000);
+              $(`[data-dropdown-id = ${id}]`).hide();
+
+              $("#main").css("filter", "blur(0)");
+              $(".drop-down").attr("data-status", "close");
+              $("[data-dropdown-id ]").attr("data-item", "hidden");
+            }, 1000);
+          }
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".accordion_head").click(function () {
+          if ($(".accordion_body").is(":visible")) {
+            $(".accordion_body").slideUp(300);
+            $(".plusminus").text("+");
+          }
+          if ($(this).next(".accordion_body").is(":visible")) {
+            $(this).next(".accordion_body").slideUp(300);
+            $(this).children(".plusminus").text("+");
+          } else {
+            $(this).next(".accordion_body").slideDown(300);
+            $(this).children(".plusminus").text("-");
+          }
         });
       });
     </script>
