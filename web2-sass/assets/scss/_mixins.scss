@@ -1,0 +1,27 @@
+@mixin line {
+    width: 100px;
+    border: $border_light;
+}
+
+@mixin h1 {
+    font-size: 44px;
+    line-height: 1;
+    margin: 18px 0;
+}
+
+@mixin rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin star {
+    margin : 0 14px;
+    font-size: 35px;
+}
+
+@mixin container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

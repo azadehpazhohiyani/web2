@@ -1,3 +1,237 @@
-$color-danger: red .dive1 {
-  color: $color-danger;
+@import "varibels";
+@import "reset";
+@import "mixins";
+
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.line {
+  @include line;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  background: $dblue;
+  padding: 14px 10px;
+  .container {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      h2 {
+        color: $white;
+      }
+    }
+    .menu {
+        a {
+          text-transform: uppercase;
+          color: $white;
+          font-weight: 500;
+          margin-left: 22px;
+          transition: color 800ms;
+          &:hover {
+            color: $lblue;
+          }
+        }
+    }
+  }
+}
+.main {
+  width: 100%;
+  min-height: 80vh;
+  background: $lblue;
+  display: flex;
+  align-items: center;
+  .container {
+    margin:0 auto;
+    max-width: 450px;
+    text-align: center;
+    color: $white;
+      img {
+          width: 250px;
+      }
+      h1 {
+        @include h1;
+      }
+      .rating {
+        @include rating;
+          span {
+            @include star ;
+        }
+      }
+      h3 {
+        font-size: 23px;
+        font-weight: 400;
+        margin: 30px 0 0 0;
+      }
+   }
+ }
+ .portfolio {
+  padding: 80px 0;
+    .container {
+    color: $dblue;
+    .title {
+      text-align: center;
+      h1 {
+        font-size: 44px;
+        line-height: 1;
+        margin: 18px 0;
+      }
+      .rating {
+        @include rating;
+        .line {
+          border: $border_dark;
+        }
+          span {
+          @include star ;
+        }
+      }
+    }
+    .cardWrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px 0 0 0;
+      .card {
+        width: 100%;
+        max-width: 30%;
+        min-width: 300px;
+        margin: 15px;
+        height: 300px;
+        border-radius: 50%;
+        background: url(../image/Flat-Icons.com-Flat-Cabin.svg) no-repeat center/cover;
+        &:nth-child(2){
+        background: url(../image/Flat-Icons.com-Flat-Cake.svg) no-repeat center/cover;
+        }
+        &:nth-child(3){
+        background: url(../image/Flat-Icons.com-Flat-Circus.svg) no-repeat center/cover;
+        }
+        &:nth-child(4){
+        background: url(../image/Flat-Icons.com-Flat-Gamepad.svg) no-repeat center/cover;
+        }
+        &:nth-child(5){
+        background: url(../image/Flat-Icons.com-Flat-Safe.svg) no-repeat center/cover;
+        }
+        &:nth-child(6){
+        background: url(../image/Flat-Icons.com-Flat-Submarine.svg) no-repeat center/cover;
+        }
+      }
+    }
+  }
+ }
+
+ .about {
+  width: 100%;
+  padding: 100px 0;
+  background: $lblue;
+  color: $white;
+  .container {
+   @include container;
+    .title {
+      text-align: center;
+      h1 {
+      @include h1;
+      }
+      .rating {
+        @include rating;
+        span {
+          @include star ;
+        }
+      }
+    }
+    .info {
+      width: 100%;
+      max-width: 600px;
+      display: flex ;
+      justify-content: space-between;
+      padding: 34px 0;
+      .left , .right {
+        width: 100%;
+        max-width: 46%;
+        p {
+          line-height: 1.5;
+          font-size: 17px;
+          text-align: justify;
+        }
+      }
+    }
+    .btn {
+      display: inline-block;
+      border: 2px solid $white;
+      color: $white;
+      padding: 16px 30px;
+      border-radius: 8px;
+      transition: background 600ms , border 600ms , color 600ms;
+      &:hover {
+        background: $gray;
+        color: $dblue;
+        border: 2px solid $gray;
+      }
+      span {
+        margin-right: 10px;
+      }
+    }
+ }
+}
+
+.contact {
+  padding: 100px 0;
+  color: $dblue;
+  .container {
+    @include container ;
+    .title {
+      text-align: center;
+      h1 {
+        @include h1 ;
+      }
+      .rating {
+        @include rating ;
+        .line {
+          border: $border_dark;
+        }
+        span {
+          @include star ;
+        }
+      }
+    }
+    .contactWrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 680px;
+      padding: 34px 0 0 0;
+      input , textarea {
+        width: 100%;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $bdc;
+        color: $dblue;
+        padding:14px 0 ;
+        margin-bottom: 20px;
+        &::placeholder {
+          color: $dblue;
+          font-size: 24px;
+        }
+      }
+      .btn {
+        display: inline-block;
+        background: $dblue;
+        padding: 14px 0;
+        width: 140px;
+        text-align: center;
+        border-radius: 4px;
+        color: $white;
+        transition: background 600ms;
+        &:hover {
+          background:darken($color: $lblue, $amount: 10%);
+        }
+      }
+    }
+  }
 }
