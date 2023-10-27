@@ -23,6 +23,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     .logo {
+      cursor: pointer;
       h2 {
         color: $white;
       }
@@ -232,6 +233,64 @@ nav {
           background:darken($color: $lblue, $amount: 10%);
         }
       }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  background: $dblue;
+   .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0;
+    .card {
+      width: 100%;
+      max-width: 30%;
+      color: $white;
+      text-align: center;
+      p {
+        line-height: 1.7;
+        a {
+          color: $dblue;
+          font-weight: 500;
+        }
+      }
+      h2 {
+        margin-bottom: 18px;
+        }
+      .iconWarap {
+        display: flex;
+        justify-content: center;
+        .circle {
+          width: 40px;
+          height: 40px;
+          border: $border_light;
+          border-radius: 50px;
+          margin: 0 8px;
+          display: flex;
+          background: $dblue;
+          cursor: pointer;
+          transition: background 500ms , color 500ms;
+          &:hover {
+            background: $white;
+            color: $dblue;
+          }
+          span {
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    width: 100%;
+    text-align: center;
+    padding: 24px 0;
+    background: $ftc;
+    p {
+      color: $white;
+      font-size: 14px;
     }
   }
 }
