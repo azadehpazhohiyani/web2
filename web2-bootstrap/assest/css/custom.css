@@ -13,6 +13,9 @@ a {
 p {
   margin: 0;
 }
+ul {
+  list-style: none;
+}
 #header .navbar {
   border-bottom: 1px solid #ddd;
   background-color: #f8f8f8e0;
@@ -238,4 +241,45 @@ p {
   text-align: justify;
   line-height: 32px;
   color: #4d4d4d;
+}
+#section-blog-posts {
+  padding: 100px 20px;
+}
+#section-blog-posts .card {
+  transition: 0.5s;
+}
+#section-blog-posts .card img {
+  object-fit: cover;
+}
+#section-blog-posts .card:hover {
+  top: -10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#cities {
+  background: #f8f8f9 url(../image/map-back.svg) no-repeat;
+}
+#footer {
+  padding: 60px 10px;
+}
+#footer .copyright h3,
+#footer .copyright p {
+  font-size: 12px;
+}
+#footer .contact a {
+  color: white;
+  margin-left: 15px;
+  font-size: 25px;
+  transition: 0.5s;
+}
+#footer .contact a:hover {
+  color: #f7663a;
+}
+#footer li a {
+  line-height: 2.5;
+  color: white;
+  font-size: 12px;
+  transition: 0.5s;
+}
+#footer li a:hover {
+  color: #f7663a;
 }
